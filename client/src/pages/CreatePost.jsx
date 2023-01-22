@@ -19,18 +19,23 @@ const CreatePost = () => {
   const [generatingImg, setGeneratingImg] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const generatedImage = () => {};
+  const generatedImage = () => {
+
+  };
 
   const handleSubmit = () => {
 
   };
 
-  const handleChange = () => {
-
+  // handle key press..spread form and replace values
+  const handleChange = (e) => {
+    setForm({...form,[e.target.name]: e.target.value});
   };
 
+  // get a random prompt and then we spread form to replace prompt
   const handleSurpriseMe = () => {
-
+    const randomPrompt = getRandomPrompt(form.prompt);
+    setForm({...form, prompt: randomPrompt});
   };
 
   return (
@@ -46,7 +51,7 @@ const CreatePost = () => {
             <form className='mt-16 max-w-3xl' onSubmit={handleSubmit}>
               <div className='flex flex-col gap-5'>
                 <FormField 
-                  lablename='Your Name'
+                  labelName='Name'
                   type="text" 
                   name="name"
                   placeholder="Enter your name"
@@ -54,13 +59,13 @@ const CreatePost = () => {
                   handleChange={handleChange}
                   />
                   <FormField 
-                  lablename='Prompt'
+                  labelName='Prompt'
                   type="text" 
                   name="prompt"
                   placeholder="A Samurai riding a Horse on Mars, lomography."
                   value={form.prompt}
                   handleChange={handleChange}
-                  isSurpiseMe
+                  isSurpriseMe
                   handleSurpriseMe={handleSurpriseMe}
                   />
                   <div className='relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center'>
