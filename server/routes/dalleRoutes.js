@@ -13,8 +13,8 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 router.route('/').get((req, res) => {
-    res.send('Hello World');
-})
+    res.status(200).json({message:'Hello from DALL-E'});
+});
 
 // get the response database 
 router.route('/').post(async (req, res) => {
