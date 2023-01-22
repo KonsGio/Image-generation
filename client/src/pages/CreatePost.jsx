@@ -27,6 +27,7 @@ const CreatePost = () => {
 
   };
 
+  // Backend created with Node.js Express.js and MongoDB
   // handle key press..spread form and replace values
   const handleChange = (e) => {
     setForm({...form,[e.target.name]: e.target.value});
