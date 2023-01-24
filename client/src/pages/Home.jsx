@@ -63,9 +63,9 @@ const Home = () => {
             <div>
             <h1 className="font-extrabold text-[#222328] text-[32px]">The Ai pictures gallery</h1>
             <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]"> 
-                Welcome to our collection of AI generated pictures! Here you will find a variety of images created
+                Welcome to my collection of AI generated pictures! Here you will find a variety of images created
                  by artificial intelligence algorithms. These images are unique and often quite creative, so take your
-                  time to explore and enjoy the artwork. We hope you find something that inspires you!
+                  time to explore and enjoy the artwork. I hope you find something that inspires you! This message is created with Chat GPT Ai!
             </p>
             </div>
 
